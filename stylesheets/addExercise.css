@@ -1,0 +1,246 @@
+@import "globalVariables.css";
+
+/*----------WORKOUT AREA ADD EXERCISE------------*/
+#add-exercise-div {
+  display: flex;
+  flex-direction: column;
+  font-family: "Comfortaa";
+  font-size: 15px;
+  overflow: hidden;
+  margin-bottom: 200px;
+}
+#add-exercise-button-div {
+  height: 35px;
+  width: 160px;
+  padding: 5px;
+}
+#add-exercise-button {
+  display: grid;
+  grid-template-columns: 130px 20px;
+  grid-auto-rows: 18px;
+  height: 28px;
+  width: 160px;
+  border: none;
+  border-radius: 14px;
+  padding: 4px 3px 4px 3px;
+  background-color: #F76;
+}
+#add-exercise-button:hover {
+  cursor: pointer;
+  border: 2px solid #900;
+  padding: 2px 1px 2px 1px;
+}
+#add-exercise-button p {
+  font-family: inherit;
+  font-size: 18px;
+  padding: 0;
+  margin: 0;
+}
+#add-exercise-arrows {
+  display: block;
+}
+#add-exercise-button .add-exercise-arrow {
+  width: 2px;
+  height: 10px;
+  background-color: #FFF;
+  border-radius: 50%;
+  transition-duration: 0.3s;
+}
+#add-exercise-arrow-left {
+  transform: translate(200%, 60%) rotate(-45deg);
+}
+#add-exercise-arrow-right {
+  transform: translate(500%, -40%) rotate(45deg);
+}
+#add-exercise-form-div {
+  width: 500px;
+  color: inherit;
+  height: auto;
+  overflow: hidden;
+}
+#add-exercise-form {
+  display: none;
+  opacity: 0;
+  position: relative;
+  top: -200px;
+  flex-direction: column;
+  gap: 0px;
+  width: 95%;
+  height: auto;
+  font-family: inherit;
+  color: #000;
+  margin: auto;
+  margin-top: 30px;
+  transition-duration: 0.5s;
+}
+#add-exercise-list {
+  display: none;
+  position: absolute;
+  top: 24px;
+  height: auto;
+  max-height: 150px;
+  width: 98%;
+  padding: 5px 0;
+  background: white;
+  border: 1px solid #AAA;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  overflow-y: scroll;
+}
+#add-exercise-list::-webkit-scrollbar {
+  width: 6px;
+}
+#add-exercise-list::-webkit-scrollbar-track {
+  background: inherit;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+#add-exercise-list::-webkit-scrollbar-thumb {
+  background: #EDD;
+  width: 4px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+#add-exercise-list::-webkit-scrollbar-thumb:hover {
+  background: #CCC;
+}
+#add-exercise-list > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 4px 15px;
+}
+#add-exercise-list > div:hover {
+  background-color: #EEE;
+  cursor: pointer;
+}
+#add-exercise-list div p {
+  font-size: inherit;
+  width: auto;
+  padding: 0;
+  margin: 0;
+}
+.remove-exercise-list-button {
+  margin: 0;
+}
+#add-exercise-form {
+  --grid-template: 6% 45% 10% 27% 6% 8%;
+}
+#series-labels {
+  display: grid;
+  grid-template-columns: var(--grid-template);
+  height: 26px;
+  margin-top: 20px;
+}
+#series-labels p {
+  height: 20px;
+  margin: 0;
+  padding: 3px 0;
+  font-size: 18px;
+  transition-duration: 0s;
+}
+#series-div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.single-series-div {
+  display: grid;
+  grid-template-columns: var(--grid-template);
+  height: 34px;
+  align-items: center;
+}
+.series-id-label {
+  font-size: 18px;
+  margin: 0;
+}
+.series-weights-label {
+  font-size: 15px;
+  margin: 0;
+  margin-left: 8px;
+}
+.add-exercise-form-input {
+  font-family: "Comfortaa";
+  font-size: 16px;
+  height: 25px;
+  border: 1px solid red;
+  border-radius: 13px;
+  padding: 0 10px 0 10px
+}
+.add-exercise-form-input:focus {
+  outline: 1px solid red;
+  height: 23px;
+}
+#add-exercise-form-name {
+  width: 100%;
+  height: 22px;
+  font-size: 18px;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid black;
+}
+#add-exercise-form-description {
+  width: 100%;
+  height: 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 3px;
+  border: 1px solid black;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+#add-exercise-form-name:focus {
+  outline: none;
+  height: 21px;
+  border-bottom: 2px solid black;
+}
+.remove-series-button-cross {
+  background: black;
+  width: 14px;
+  height: 2px;
+  margin: 0;
+}
+#add-series-button {
+  font-family: "Comfortaa";
+  height: 25px;
+  width: 120px;
+  margin: auto;
+  font-size: 18px;
+  border: none;
+  background: none;
+  transition-duration: 0.1s;
+}
+#add-series-button:hover {
+  font-size: 19px;
+  cursor: pointer;
+}
+.exercise-form-button {
+  box-sizing: border-box;
+  height: 28px;
+  width: 140px;
+  font-family: inherit;
+  font-size: 18px;
+  border: none;
+  border-radius: 14px;
+  padding: 3px 2px 3px 2px;
+  margin-left: 6%;
+  background-color: #F76;
+  transition-duration: 0s;
+}
+.exercise-form-button:hover {
+  cursor: pointer;
+  background-color: #C54;
+  padding: 2px 1px 2px 1px;
+}
+/*----------/TABLE ADD EXERCISE------------*/

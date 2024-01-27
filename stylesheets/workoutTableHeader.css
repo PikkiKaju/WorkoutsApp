@@ -1,0 +1,273 @@
+/*----------TABLE AREA HEADER------------*/
+#table-area {
+  position: relative;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  padding: 0 100px 0 50px;
+  margin: 0;
+  overflow-x: hidden;
+}
+.workout-not-displayed {
+  font-family: inherit;
+  font-size: 20px;
+  margin: 50px 40px;
+  border-bottom: 1px solid black;
+}
+#table-area-header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-basis: 50% 40% 10%;
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -webkit-flex-basis: 50% 40% 10%;
+  justify-content: space-between;
+  box-sizing: content-box;
+  width: 100%;
+  height: minmax(35px, 80px);
+  margin: 50px 20px 0 0;
+  padding: 0 0px 10px 20px;
+  font-family: "Comfortaa";
+  border-bottom: 1px solid #BBB;
+}
+#table-area-name {
+  display: flex;
+  flex-direction: row;
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
+  height: 36px;
+  width: auto;
+  margin-bottom: 5px;
+}
+#table-area-name-wrap {
+  display: flex;
+  flex-direction: row;
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
+  height: 35px;
+  border-bottom: 1px solid transparent;
+  cursor: text;
+}
+#table-area-name-wrap:focus-within {
+  border-bottom: 1px solid #F66;
+}
+#table-area-name-image {
+  height: 25px;
+  padding-top: 3px;
+  padding-right: 7px;
+  cursor: text;
+}
+#table-area-workout-name {
+  width: auto;
+  width: auto;
+  text-overflow: ellipsis;
+  font-size: 30px;
+  font-family: inherit;
+  transition-duration: 0.1s;
+  padding: 0px;
+  outline: none;
+  border: none;
+}
+#table-area-name-prompt {
+  display: block;
+  opacity: 0;
+  transition-duration: 0.2s;
+}
+#table-area-name-prompt p {
+  font-size: 16px;
+  padding: 0px 7px;
+  margin: 0;
+  cursor: default;
+}
+#table-area-date {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  height: 35px;
+  width: 400px;
+  border-bottom: 0px solid #F66;
+}
+#table-area-workout-date:focus {
+  border-bottom: 1px solid #F66;
+}
+#table-area-workout-date {
+  width: 240px;
+  flex-direction: row-reverse;
+  font-size: 23px;
+  font-family: inherit;
+  transition-duration: 0.1s;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+#table-area-workout-date .header-area-save-button {
+  width: 60px;
+  margin: auto;
+}
+.header-area-save-button button {
+  display: none;
+  opacity: 0;
+  width: 60px;
+  height: 22px;
+  padding: 2px;
+  margin: 2px 0;
+  text-align: center;
+  font-size: 18px;
+  font-family: inherit;
+  transition-duration: 0.1s;
+  background-color: #F99;
+  border: none;
+  border-radius: 4px;
+}
+.header-area-save-button button:hover {
+  background-color: #F66;
+  cursor: pointer;
+}
+#table-area-date-prompt {
+  display: block;
+  opacity: 0;
+  transition-duration: 0.2s;
+  cursor: default;
+}
+#table-area-date-prompt p {
+  font-size: 18px;
+  padding: 7px !important;
+  margin: 0;
+}
+.table-area-header p {
+  margin: 60px 30px;
+  font-size: 25px;
+  font-weight: bold;
+}
+#table-area-dropdown {
+  height: 35px;
+  position: relative;
+}
+  #table-area-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-sizing: border-box;
+    height: 25px;
+    width: 25px;
+    margin: auto;
+    padding: 10px 0;
+  }
+  .table-area-stripe {
+    background: black;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+  }
+  #table-area-button:hover .table-area-stripe { 
+    background: #888;
+  }
+  #table-area-button:hover {
+    cursor: pointer;
+  }
+  #table-area-dropdown-menu {
+    display: none;
+    height: auto;
+    width: 200px;
+    position: absolute;
+    right: 30px;
+    top: 65px;
+    z-index: 500;
+    background-color: #EDD;
+    border-radius: 3px;
+    box-shadow: 5px black;
+  }
+  #table-area-dropdown-menu ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin: 10px;
+    padding: 0px;
+  }
+  #table-area-dropdown-menu ul li {
+    font-size: 18px;
+    height: 18px;
+    padding: 3px 1px;
+    margin: 2px 2px;
+    color: black !important;
+    border-radius: 4px;
+    transition-duration: 0.1s;
+  }
+  #table-area-dropdown-menu ul li:hover {
+    background-color: #DCC;
+    cursor: pointer;
+  }
+  #table-area-dropdown-menu ul hr {
+    background-color: #888;
+    border: none;
+    height: 1px;
+    width: 100%;
+    margin: 1px;
+  }
+    #table-prompt-div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 900;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.2);
+    }
+    .table-prompt-box {
+      display: flex; 
+      flex-direction: column; 
+      width: auto;
+      min-width: 250px;
+      height: 120px;
+      background: #B99;
+      border: none;
+      border-radius: 12px;
+      padding: 10px;
+      transition-duration: 0.1s;
+      transform: scaleX(0);
+    }
+    .table-prompt-box-text {
+      height: 50%;
+      border-bottom: 1px solid black;
+    }
+    .table-prompt-box-text p {
+      width: auto;
+      padding: 18px 30px;
+      margin: auto;
+      font-size: 20px;
+      color: black;
+      justify-content: center;
+    }
+    .table-prompt-box-buttons {
+      display: flex;
+      flex-direction: row;
+    }
+    .table-prompt-box-button {
+      width: 40%;
+      height: 34px;
+      border: 0px;
+      border-radius: 17px;
+      margin: auto;
+      margin-top: 15px;
+      font-size: 19px;
+      transition-duration: 0.15s;
+    }
+    .table-prompt-box-button:hover {
+      transform: scale(1.05);
+      cursor: pointer;
+    }
+    #table-prompt-button-yes {
+      background: #FFF;
+    }
+    #table-prompt-button-no {
+      background: #F66;
+    }
+
+/*----------/TABLE AREA HEADER------------*/

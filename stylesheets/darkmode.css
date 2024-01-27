@@ -1,0 +1,131 @@
+/*-----------DARKMODE------------*/
+.darkmode {
+  animation-name: darkmode;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+  animation-duration: 0s;
+  background-color: #181818;
+  border-color: #999;
+}
+@keyframes darkmode {
+  0% {
+    color: initial;
+    background-color: initial;
+  }
+  100% {
+    color: white;
+    background-color: #181818;
+  }
+}
+.darkmode #panel-wrap {
+  border-color: #FC6;
+}
+.darkmode #panel::-webkit-scrollbar-thumb {
+  background: #555570;
+}
+.darkmode #panel::-webkit-scrollbar-thumb:hover {
+  background: #777;
+}
+.darkmode #panel-hide-button {
+  border: 1px solid #999;
+}
+.darkmode #panel-hide-button:hover {
+  background-color: #333;
+}
+.darkmode #add-new-workout-window {
+  border-color: #FC6;
+}
+.darkmode #add-workout-name::placeholder {
+  color: white;
+  opacity: 1;
+}
+.darkmode #add-workout-name:focus {
+  outline: 1px solid white;
+  border: 1px solid white;
+}
+.darkmode #add-workout-date {
+  color-scheme: dark;
+}
+.darkmode .year-wrap-arrow {
+  background-color: white;
+}
+.darkmode .workout-list-year, .darkmode .workout-list-month {
+  color: white;
+}
+.darkmode #toggle-window-label {
+  background: white !important;
+}
+.darkmode #table-area::-webkit-scrollbar-thumb {
+  background: #999;
+  border-left: 2px solid var(--darkmode-background);
+  border-right: 2px solid var(--darkmode-background);
+}
+.darkmode #table-area::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
+.darkmode #table-area-name-wrap:focus-within {
+  border-bottom: 1px solid #FC6;
+}
+.darkmode #table-area-workout-date:focus-within {
+  border-bottom: 1px solid #FC6;
+}
+.darkmode #table-area-date input {
+  color-scheme: dark;
+}
+.darkmode .table-area-stripe {
+  background: white !important;
+}
+.darkmode #table-area-button:hover .table-area-stripe { 
+  background: #BBB !important;
+}
+.darkmode .workout-table tr:hover {
+  background: #333;
+}
+.darkmode-workout-form {
+  background: #544 !important;
+  color: white !important;
+}
+.darkmode #add-exercise-form-div form div {
+  color: white !important;
+}
+.darkmode #add-exercise-list {
+  background: var(--darkmode-background);
+}
+.darkmode #add-exercise-list::-webkit-scrollbar-thumb {
+  background: #555570;
+}
+.darkmode #add-exercise-list::-webkit-scrollbar-thumb:hover {
+  background: #777;
+}
+.darkmode #add-exercise-list div:hover {
+  background-color: #444;
+}
+.darkmode .add-exercise-form-input {
+  color: #DDD;
+  border: 1px solid #A00;
+}
+.darkmode .add-exercise-form-input::placeholder {
+  color: #888;
+}
+.darkmode .add-exercise-form-input:focus {
+  border: 1px solid #C00;
+}
+.darkmode #add-exercise-form-name {
+  border-bottom: 1px solid #BBB;
+}
+.darkmode #add-exercise-form-name:focus {
+  border-bottom: 2px solid #CCC;
+}
+.remove-series-button .button-cross-darkmode, 
+.remove-exercise-list-button .button-cross-darkmode,
+.remove-exercise-button .button-cross-darkmode,
+.remove-exercise-series-button .button-cross-darkmode { 
+  background: white !important;
+}
+.remove-exercise-list-button:hover .remove-exercise-list-button  {
+  background-color: white !important;
+}
+.darkmode .table-element-arrow  {
+  background: white;
+}
+/*----------/DARKMODE------------*/

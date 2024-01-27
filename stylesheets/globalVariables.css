@@ -1,0 +1,49 @@
+
+
+:root {
+  --add-workout-transition-duration: 0.2s;
+  --panel-hide-duration: 0.5s;
+  --panel-width: 400px;
+  --darkmode-background: #181818;
+  --darkmode-border-color: #FC6;
+  --lightmode-border-color: #F66;
+  --header-height: 50px;
+  --table-lines-color: #999;
+}
+
+.remove-button-cross {
+  height: 18px;
+  width: 18px;
+  margin: auto;
+  background: none;
+  border: none;
+  padding: auto;
+}
+.remove-button-cross > div{
+  width: 14px;
+  height: 2px;
+  background: black;
+  border-radius: 1px;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -o-border-radius: 1px;
+}
+.remove-button-cross :nth-child(1) {
+  transform: translate(-50%, 50%) rotate(-45deg);
+  -webkit-transform: translate(-50%, 50%) rotate(-45deg);
+  -moz-transform: translate(-50%, 50%) rotate(-45deg);
+  -ms-transform: translate(-50%, 50%) rotate(-45deg);
+  -o-transform: translate(-50%, 50%) rotate(-45deg);
+}
+.remove-button-cross :nth-child(2) {
+  transform: translate(-50%, -50%) rotate(45deg);
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+  -moz-transform: translate(-50%, -50%) rotate(45deg);
+  -ms-transform: translate(-50%, -50%) rotate(45deg);
+  -o-transform: translate(-50%, -50%) rotate(45deg);
+}
+.remove-button-cross:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}

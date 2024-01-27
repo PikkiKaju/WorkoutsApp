@@ -1,0 +1,160 @@
+
+/* New workout window toggle button */
+
+#button-div {
+  position: absolute;
+  top: 11px;
+  right: 10px;
+  height: 28px;
+  width: 175px;
+}
+#toggle-window-button {
+  position: absolute;
+  right: 0px;
+  top: 10px;
+  height: 28px;
+  width: 28px;
+  border: 1px solid red;
+  border-radius: 8px;
+  background-color: #FDFCFC;
+  transition-duration: var(--add-workout-transition-duration);
+}
+#toggle-window-label-div:hover {
+  cursor: pointer;
+}
+#toggle-window-button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+#button-div:hover #toggle-window-label{
+    right: 4px;
+}
+.button-cross {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: red;
+  border-radius: 2px;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+#button-cross-hori {
+  width: 16px;
+  height: 3px;
+}
+#button-cross-vert {
+  width: 3px;
+  height: 16px;
+  display: block;
+  opacity: 1;
+  transition-duration: var(--add-workout-transition-duration);
+}
+#toggle-window-label-div {
+  overflow: hidden;
+  position: relative;
+  top: 0;
+  left: 130px;
+  height: 100%;
+  width: 160px;
+}
+#toggle-window-label {
+  /* position: relative; */
+  /* top: 0px;
+  right: 0px; */
+  box-sizing: content-box;
+  height: 18px;
+  width: 140px;
+  font-size: 18px;
+  color: black;
+  padding: 4px;
+  margin: auto;
+  background-color: #FDFCFC;
+  transition-duration: 0.5s; /*Used in js */
+  border: 1px solid red;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+/* New workout window */
+
+#add-new-workout-window-wrap {
+  display: none;
+  opacity: 0;
+  height: 0px;
+  transition-duration: var(--add-workout-transition-duration);
+}
+#add-new-workout-window {
+  position: relative;
+  top: -120px;
+  width: 300px;
+  height: 120px;
+  padding: 10px 10px;
+  margin: 20px auto 0px auto;
+  transition-duration: var(--add-workout-transition-duration); /*Used in js */
+  border: 1px solid red;
+  border-radius: 5px;
+  box-shadow: 0 0 2px #555;
+  background-color: #FFF;
+  z-index: 999;
+}
+#add-workout-form {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  margin: 0;
+}
+  #add-workout-form div {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    justify-content: space-between;
+    height: 50px;
+    margin-top: 10px;
+  }
+  #add-workout-form div div {
+    height: minmax(0px, 40px);
+    width: minmax(0px, calc(100% - 70px));
+    margin: 0 5px;
+    transition-duration: 0.2s;
+  }
+  #add-workout-form div div p {
+    font-size: 13px;
+    color: red;
+    margin: 0;
+  }
+  .add-workout-input {
+    width: 100%;
+    height: 28px;
+    box-sizing: border-box;
+    font-family: "Comfortaa";
+    font-size: 16px;
+    margin: 4px 0;
+    padding: 0 4px;
+    border: 1px solid #999;
+    border-radius: 3px;
+    outline-width: 1px;
+  }
+  #add-workout-submit {
+    width: 60px;
+    height: 25px;
+    padding: 2px 0 2px 0;
+    margin-top: 5px;
+    font-size: 15px;
+    text-align: center;
+    background-color: #F99;
+    border: none;
+    border-radius: 3px;
+    transition-duration: 0.2s;
+  }
+  #add-workout-submit:hover {
+    background-color: #F66;
+    cursor: pointer;
+  }

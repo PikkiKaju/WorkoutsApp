@@ -1,0 +1,229 @@
+/*-----------PANEL------------*/
+
+#panel {
+  display: flex;
+  flex-direction: column;
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  position: relative;
+  top: 0;
+  left: 0;
+  height: calc(100vh - var(--header-height));
+  width: var(--panel-width);
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  z-index: 700;
+  margin: 0;
+  padding-bottom: 40px;
+  background: #FDFDFF;
+  font-family: "Comfortaa";
+  transition-duration: var(--panel-hide-duration);
+}
+#panel::-webkit-scrollbar {
+  width: 6px;
+}
+#panel::-webkit-scrollbar-track {
+  background: inherit;
+}
+#panel::-webkit-scrollbar-thumb {
+  background: #EDD;
+  width: 4px;
+  border-radius: 3px;
+}
+#panel::-webkit-scrollbar-thumb:hover {
+  background: #CCC;
+}
+#panel-hide-button {
+  position: absolute;
+  top: 50%;
+  left: 400px;
+  width: 14px;
+  height: 40px;
+  background-color: white; /* #F4F4F4; */
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border: 1px solid #F66;
+  transform: translate(0, -50%);
+  z-index: 690;
+  transition-duration: var(--panel-hide-duration);
+}
+#panel-hide-button:hover {
+  background-color: #EEE;
+  cursor: pointer;
+}
+#panel-hide-button .panel-hide-arrow {
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  width: 2px;
+  height: 7px;
+  background-color: #777;
+  border-radius: 50%;
+}
+#panel-hide-arrow-top {
+  transform: translate(0, -70%) rotate(45deg);
+}
+#panel-hide-arrow-bot {
+    transform: translate(0, -10%) rotate(-45deg);
+  }
+/*------------TOP BAR------------*/
+ 
+  #workout-label {
+    position: absolute;
+    top: 12px;
+    left: 30px;
+    font-size: 26px;
+    color: white;
+    font-weight: 400;
+  }
+  #workout-added {
+    opacity: 1;
+    display: block;
+    position: absolute;
+    box-sizing: content-box;
+    top: 8px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 300px;
+    height: 22px;
+    padding: 2px;
+    font-size: 18px;
+    font-family: "Comfortaa";
+    text-align: center;
+    border: 1px solid red;
+    border-radius: 25px;
+    background-color: #FFF;
+    transition: 1.5s;
+  }
+  #workout-added p {
+    margin: 0;
+  }
+/*----------/TOP BAR-----------*/
+/*------------LIST-------------*/
+  #workout-list {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    gap: 0px;
+    height: auto;
+    width: 90%;
+    margin: 40px 10px;
+    padding-bottom: 50px;
+  }
+  .workout-list-empty p {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0px 30px;
+    margin: 10px 0;
+  }
+  .workout-list-year-wrap {
+    display: flex;
+    flex-direction: column;
+    --year-wrap-trans-duration: 0.1s;
+  }
+  .year-wrap-header {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    left: -15px;
+    margin: 10px 0 0 20px;
+    z-index: 10;
+    font-size: 20px;
+  }
+  .workout-list-year {
+    font-size: 20px;
+    color: #000;
+    margin: 0 10px;
+    font-weight: bold;
+  }
+  .workout-list-month {
+    font-size: 18px;
+    color: #000;
+    margin: 10px 0;
+    font-weight: bold;
+  }
+  .year-wrap-arrows {
+    width: 16px;
+    cursor: pointer;
+  }
+  .year-wrap-arrows .year-wrap-arrow {
+    width: 2px;
+    height: 10px;
+    background-color: #000;
+    border-radius: 50%;
+    transition-duration: var(--year-wrap-trans-duration);
+    transition-property: transform;
+  }
+  .year-wrap-arrow-left {
+    transform: translate(200%, 60%) rotate(-135deg);    ;
+    -webkit-transform: translate(200%, 60%) rotate(-135deg);
+    -moz-transform: translate(200%, 60%) rotate(-135deg);
+    -ms-transform: translate(200%, 60%) rotate(-135deg);
+    -o-transform: translate(200%, 60%) rotate(-135deg);
+  }
+  .year-wrap-arrow-right {
+    transform: translate(500%, -40%) rotate(135deg);
+    -webkit-transform: translate(500%, -40%) rotate(135deg);
+    -moz-transform: translate(500%, -40%) rotate(135deg);
+    -ms-transform: translate(500%, -40%) rotate(135deg);
+    -o-transform: translate(500%, -40%) rotate(135deg);
+  }
+  .year-wrap-list {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    top: 0;
+    margin-left: 10px;
+    opacity: 1;
+    transition-duration: var(--year-wrap-trans-duration);
+    z-index: 2;
+  }
+  .workout-div {
+    display: flex;
+    -webkit-display: flex;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    width: calc(100% - 20px);
+    height: 30px;
+    gap: 10px;
+    font-size: 18px;
+    border-bottom: 1px solid #555;
+    transition-duration: 0.1s;
+    padding: 10px 10px 0 10px;
+  }
+  .workout-div-date {
+    width: 120px;
+    font-size: 18px;
+    text-align: right;
+  }
+  .workout-div-name {
+    width: calc(100% - 130px);
+  }
+  .workout-div p {
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .workout-div:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+  }
+  .workout-div-anchor {
+    text-decoration: none;
+    color: black;
+  }
+  .workout-div-anchor input {
+    display: block;
+    position: absolute;
+    left: -1000px;
+  }
+  .workout-div-displayed {
+    background: #EEF;
+  }
+  .workout-div-not-displayed {
+    background: #FFF;
+  }
+/*-----------/LIST--------------*/
+/*-----------/PANEL-------------*/

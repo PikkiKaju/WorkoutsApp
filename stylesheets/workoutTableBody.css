@@ -1,0 +1,185 @@
+@import "globalVariables.css";
+
+/*----------WORKOUT TABLE------------*/
+.workout-table {
+  width: 100%;
+  height: auto;
+  font-size: 16px;
+  margin: 20px 0;
+  border-collapse: collapse;
+  --table-transition-duration: 0.05s;
+}
+.workout-table-head tr {
+  height: 40px;
+  border-bottom: 1px solid #BBB;
+  text-align: left;
+}
+.workout-table-body tr:hover {
+  background: #F0F0F0;
+}
+.dragover-overline {
+  border-bottom: 2px solid #44A !important;
+}
+.workout-table-body .dragging  {
+  cursor: grabbing !important;
+}
+.exercise-table {
+  margin: 10px 0;
+  border-collapse: collapse;
+  border-spacing: 3px;
+}
+.exercise-table-body {
+  --table-body-display: table-row-group; /*for js*/
+  display: none;
+  opacity: 0;
+  transition-duration: var(--table-transition-duration);
+}
+.exercise-table-head tr {
+  height: 20px;
+  padding: 0;
+  border-bottom: 1px solid #BBB;
+  text-align: left;
+  overflow-x: hidden;
+}
+.exercise-table-body tr td {
+  padding: 5px 0;
+  transition-duration: var(--table-transition-duration);
+}
+.exercise-table-body :first-child td {
+  padding-top: 10px;
+}
+.exercise-table-body tr:hover .exercise-table-body tr td {
+  transform: translateY(40px);
+}
+.table-element-move > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 30px;
+  height: 13px;
+  cursor: grab;
+}
+.table-element-move > div > div {
+  width: 15px;
+  height: 1px;
+  margin: 0px 0;
+  background-color: #666;
+  border-radius: 1px;
+}
+.table-element-id div {
+  width: 25px;
+}
+.table-element-name {
+  width: 50%;
+}
+.table-element-arrows > div {
+  width: 20px;
+  margin-right: 10px;
+}
+.table-element-arrows > button {
+  background: transparent;
+  border: none;
+  width: 20px;
+  padding: 0;
+  cursor: pointer;
+}
+.table-element-arrows .table-element-arrow {
+  width: 1px;
+  height: 10px;
+  margin: 0;
+  background: black;
+  border-radius: 50%;
+  transition-duration: 0.3s;
+}
+.table-element-arrow-left {
+  transform: translate(-400%, 50%) rotate(-45deg);
+  -webkit-transform: translate(-400%, 50%) rotate(-45deg);
+  -moz-transform: translate(-400%, 50%) rotate(-45deg);
+  -ms-transform: translate(-400%, 50%) rotate(-45deg);
+  -o-transform: translate(-400%, 50%) rotate(-45deg);
+}
+.table-element-arrow-right {
+  transform: translate(300%, -50%) rotate(45deg);
+  -webkit-transform: translate(300%, -50%) rotate(45deg);
+  -moz-transform: translate(300%, -50%) rotate(45deg);
+  -ms-transform: translate(300%, -50%) rotate(45deg);
+  -o-transform: translate(300%, -50%) rotate(45deg);
+}
+.table-element-repetitions {
+  width: 32%;
+  min-width: 190px;
+  text-align: left;
+}
+.table-element-weights {
+  width: 20%;
+  text-align: left;
+}
+.table-element-remove {
+  display: block;
+  width: 18px;
+  height: 18px;
+  padding-bottom: 6px;
+}
+.exercise-series-decription {
+  padding: 0;
+  margin: 0;
+  vertical-align: top;
+}
+.exercise-series-decription p {
+  padding: 0;
+  margin: 0;
+}
+.exercise-series-track {
+  position: relative;
+  top: -7px;
+  padding: 0;
+}
+.exercise-table-body tr td:has(.exercise-series-track) {
+  padding: 0;
+  height: 100%;
+}
+.exercise-table-body tr td:has(.exercise-series-track) > div {
+  height: 100%;
+}
+.exercise-series-track-ver {
+  background: var(--table-lines-color);
+  height: 20px;
+  width: 1px;
+}
+.exercise-series-track-hor {
+  background: var(--table-lines-color);
+  height: 1px;
+  width: 10px;
+}
+.exercise-table-body :nth-child(n + 2) :nth-child(3) {
+  transform: translateY(-10px);
+  -webkit-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+  -o-transform: translateY(-10px);
+}
+.exercise-table-body :nth-child(n + 2) :nth-child(3) 
+  .exercise-series-track-ver {
+    height: 30px;
+}
+
+.remove-exercise-series-button {
+  padding: 0;
+}
+.remove-exercise-button .button-cross, 
+.remove-exercise-series-button .button-cross {
+  position: static;
+  width: 14px;
+  padding: 0 !important;
+  margin: auto;
+  height: 2px;
+  background: black;
+}
+.remove-button-cross-top {
+  transform: translate(0%, 50%) rotate(-45deg);
+}
+.remove-button-cross-bot {
+  transform: translate(0%, -50%) rotate(45deg);
+}
+ 
+  

@@ -1,0 +1,37 @@
+/*---------DARKMODE SWITCH----------*/
+#darkmode-switch-div {
+  position: fixed;
+  top: calc(var(--header-height)/2 - 10px);
+  right: 20px;
+  height: 20px;
+  width: auto;
+  margin: 0;
+  padding: 0;
+}
+.darkmode-switch {
+  height: 20px;
+  width: 40px;
+  background-color: #EEE;
+  border: 1px solid #225;
+  border-radius: 12px;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+.darkmode-switched {
+  background-color: #555;
+}
+.darkmode-switch-node {
+  position: absolute;
+  height: 14px;
+  width: 14px;
+  left: 1px;
+  margin: 2px 2px;
+  background-color: #EA6;
+  border: 1px solid #C55;
+  border-radius: 50%;
+  transition-duration: 0.2s;
+}
+.darkmode-switched-node {
+  left: 21px;
+}
+/*----------/DARKMODE SWITCH------------*/

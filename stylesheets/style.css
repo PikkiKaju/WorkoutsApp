@@ -1,0 +1,86 @@
+@import "globalVariables.css";
+@import "panel.css";
+@import "newWorkoutWindow.css";
+@import "darkmodeSwitch.css";
+@import "workoutTableHeader.css";
+@import "workoutTableBody.css";
+@import "addExercise.css";
+@import "darkmode.css";
+
+body {
+  display: grid;
+  grid-template-rows: var(--header-height) 1fr;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  font-family: "Comfortaa";
+  background: white;
+}
+header {
+  position: relative;
+  left: 0px;
+  top: 0px;
+  height: var(--header-height);
+  width: 100vw;
+  background: linear-gradient(160deg,#F66,#F76,#FA6,#FB6,#FC6);
+  z-index: 999;
+  transition-duration: var(--panel-hide-duration);
+}
+#page-wrap {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: calc(100vh - var(--header-height));
+  transition-duration: var(--panel-hide-duration);
+}
+#panel-wrap {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: calc(100vh - var(--header-height));
+  width: var(--panel-width);
+  transition-duration: var(--panel-hide-duration);
+  border-right: 1px solid red;
+}
+#table-area {
+  position: relative;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  padding: 0 100px 0 50px;
+  margin: 0;
+  overflow-x: hidden;
+}
+#table-area::-webkit-scrollbar {
+  width: 14px;
+}
+#table-area::-webkit-scrollbar-track {
+  background: inherit;
+}
+#table-area::-webkit-scrollbar-thumb {
+  background: #CCC;
+  border-left: 2px solid white;
+  border-right: 2px solid white;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+#table-area::-webkit-scrollbar-thumb:hover {
+  background: #CCC;
+}
+
+/*--------MEDIA QUERIES----------*/
+
+@media (max-width: 600px) {
+
+}
